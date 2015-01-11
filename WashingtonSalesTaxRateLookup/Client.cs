@@ -6,6 +6,8 @@ namespace WashingtonSalesTaxRateLookup
 {
     public class Client
     {
+        //http://dor.wa.gov/Content/FindTaxesAndRates/RetailSalesTax/DestinationBased/ClientInterface.aspx
+
         const string LOOKUP_URI = @"http://dor.wa.gov/AddressRates.aspx";
 
         public Response Get(Address address) {
