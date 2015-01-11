@@ -1,15 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using RestSharp;
 using System.Xml;
-using Newtonsoft.Json;
 
 namespace WashingtonSalesTaxRateLookup
 {
     public class Client
     {
+        const string LOOKUP_URI = @"http://dor.wa.gov/AddressRates.aspx";
+
         public Response Get(Address address) {
 
             var response = new Response();
@@ -21,7 +19,7 @@ namespace WashingtonSalesTaxRateLookup
             request.AddParameter("city", address.City, ParameterType.QueryString);
             request.AddParameter("zip", address.ZipCode, ParameterType.QueryString);
 
-            var client = new RestClient(@"http://dor.wa.gov/AddressRates.aspx");
+            var client = new RestClient(LOOKUP_URI);
 
             IRestResponse rest_response = client.Execute(request);
             
