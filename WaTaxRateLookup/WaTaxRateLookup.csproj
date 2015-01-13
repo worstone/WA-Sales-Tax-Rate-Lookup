@@ -7,8 +7,8 @@
     <ProjectGuid>{394CF0BF-CB3A-4EB8-9C9E-5DEA44A0B160}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WashingtonSalesTaxRateLookup</RootNamespace>
-    <AssemblyName>WashingtonSalesTaxRateLookup</AssemblyName>
+    <RootNamespace>WaTaxRateLookup</RootNamespace>
+    <AssemblyName>WaTaxRateLookup</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>

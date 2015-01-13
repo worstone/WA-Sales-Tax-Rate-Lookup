@@ -7,8 +7,8 @@
     <ProjectGuid>{1E511F20-242C-4890-BCCB-A8275B223AE8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>WashingtonSalesTaxRateLookup_Tests</RootNamespace>
-    <AssemblyName>WashingtonSalesTaxRateLookup_Tests</AssemblyName>
+    <RootNamespace>WaTaxRateLookup_Tests</RootNamespace>
+    <AssemblyName>WaTaxRateLookup_Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -45,16 +45,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="WashingtonSalesTaxRateLookup_Tests.cs" />
+    <Compile Include="Wa_Tax_Rate_Lookup_Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\WashingtonSalesTaxRateLookup\WashingtonSalesTaxRateLookup.csproj">
+    <ProjectReference Include="..\WaTaxRateLookup\WaTaxRateLookup.csproj">
       <Project>{394cf0bf-cb3a-4eb8-9c9e-5dea44a0b160}</Project>
-      <Name>WashingtonSalesTaxRateLookup</Name>
+      <Name>WaTaxRateLookup</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

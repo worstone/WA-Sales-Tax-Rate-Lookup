@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WashingtonSalesTaxRateLookup", "WashingtonSalesTaxRateLookup\WashingtonSalesTaxRateLookup.csproj", "{394CF0BF-CB3A-4EB8-9C9E-5DEA44A0B160}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaTaxRateLookup", "WaTaxRateLookup\WaTaxRateLookup.csproj", "{394CF0BF-CB3A-4EB8-9C9E-5DEA44A0B160}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B3B6C1E9-6D04-460F-9769-57359AE88240}"
 	ProjectSection(SolutionItems) = preProject
@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		.gitignore = .gitignore
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WashingtonSalesTaxRateLookup_Tests", "WashingtonSalesTaxRateLookup_Tests\WashingtonSalesTaxRateLookup_Tests.csproj", "{1E511F20-242C-4890-BCCB-A8275B223AE8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WaTaxRateLookup_Tests", "WaTaxRateLookup_Tests\WaTaxRateLookup_Tests.csproj", "{1E511F20-242C-4890-BCCB-A8275B223AE8}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{4C07A309-145A-4CA3-B629-135BEEBA4CD4}"
 	ProjectSection(SolutionItems) = preProject

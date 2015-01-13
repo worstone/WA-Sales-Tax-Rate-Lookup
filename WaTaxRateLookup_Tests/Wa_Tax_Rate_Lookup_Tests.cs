@@ -1,10 +1,10 @@
 ﻿using NUnit.Framework;
-using WashingtonSalesTaxRateLookup;
+using WaTaxRateLookup;
 
-namespace WashingtonSalesTaxRateLookup_Tests
+namespace WaTaxRateLookup_Test
 {
     [TestFixture]
-    public class WashingtonSalesTaxRateLookup_Tests
+    public class Wa_Tax_Rate_Lookup_Tests
     {
 
         [Test]

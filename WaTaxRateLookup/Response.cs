@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace WashingtonSalesTaxRateLookup
+namespace WaTaxRateLookup
 {
     public class Response
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace WashingtonSalesTaxRateLookup
+namespace WaTaxRateLookup
 {
     public class Address
     {

@@ -2,7 +2,7 @@
 using RestSharp;
 using System.Xml;
 
-namespace WashingtonSalesTaxRateLookup
+namespace WaTaxRateLookup
 {
     public class Client
     {

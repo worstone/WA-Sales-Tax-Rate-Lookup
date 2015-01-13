@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WashingtonSalesTaxRateLookup
+namespace WaTaxRateLookup
 {
     public class TaxRateLookupException : Exception
     {
