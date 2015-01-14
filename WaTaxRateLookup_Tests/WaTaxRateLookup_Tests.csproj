@@ -45,7 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Wa_Tax_Rate_Lookup_Tests.cs" />
+    <Compile Include="Wa_Tax_Rate_Lookup_TF.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

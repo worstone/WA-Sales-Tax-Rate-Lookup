@@ -20,15 +20,16 @@ using WaTaxRateLookup;
 namespace WaTaxRateLookup_Test
 {
     [TestFixture]
-    public class Wa_Tax_Rate_Lookup_Tests
+    public class Wa_Tax_Rate_Lookup_TF
     {
+        Client _Client = new Client();
 
         [Test]
         public void Good_Address_Test() {
             var address = new Address("6500 Linderson way", "Olympia", "98501");
-            var client = new Client();
-            var response = client.Get(address);
+            var response = _Client.Get(address);
             Assert.AreEqual(0, response.ResultCode);
+            Assert.AreEqual("The address was found.", response.ResultCodeDefinition);
             Assert.AreEqual("3406", response.LocationCode);
             Assert.NotNull(response.ResultCodeDefinition);
             Assert.NotNull(response.LocalRate);
@@ -40,9 +41,9 @@ namespace WaTaxRateLookup_Test
         [Test]
         public void Bad_ZipCode_Test() {
             var address = new Address("6500 Linderson way", "", "980501");
-            var client = new Client();
-            var response = client.Get(address);
+            var response = _Client.Get(address);
             Assert.AreEqual(3, response.ResultCode);
+            Assert.AreEqual("The address, ZIP+4, and ZIP could not be  found.", response.ResultCodeDefinition);
             Assert.NotNull(response.ResultCodeDefinition);
             Assert.IsNull(response.LocalRate);
             Assert.IsNull(response.LocationCode);
@@ -53,9 +54,9 @@ namespace WaTaxRateLookup_Test
         [Test]
         public void No_Address_Test() {
             var address = new Address("", "", "98501");
-            var client = new Client();
-            var response = client.Get(address);
+            var response = _Client.Get(address);
             Assert.AreEqual(2, response.ResultCode);
+            Assert.AreEqual("Neither the address or ZIP+4 was found, but  the 5-digit ZIP was located.", response.ResultCodeDefinition);
             Assert.NotNull(response.ResultCodeDefinition);
             Assert.NotNull(response.LocalRate);
             Assert.NotNull(response.LocationCode);
@@ -66,9 +67,9 @@ namespace WaTaxRateLookup_Test
         [Test]
         public void Bad_Address_Good_ZipCode_Test() {
             var address = new Address("&&&&&&&&&&&&&", "", "98501");
-            var client = new Client();
-            var response = client.Get(address);
+            var response = _Client.Get(address);
             Assert.AreEqual(2, response.ResultCode);
+            Assert.AreEqual("Neither the address or ZIP+4 was found, but  the 5-digit ZIP was located.", response.ResultCodeDefinition);
             Assert.NotNull(response.ResultCodeDefinition);
             Assert.NotNull(response.LocalRate);
             Assert.NotNull(response.LocationCode);
@@ -79,9 +80,9 @@ namespace WaTaxRateLookup_Test
         [Test]
         public void Good_Address_Bad_ZipCode_Test() {
             var address = new Address("6500 Linderson way", "", "9111118501");
-            var client = new Client();
-            var response = client.Get(address);
+            var response = _Client.Get(address);
             Assert.AreEqual(4, response.ResultCode);
+            Assert.AreEqual("Invalid arguements.", response.ResultCodeDefinition);
             Assert.NotNull(response.ResultCodeDefinition);
             Assert.IsNull(response.LocalRate);
             Assert.IsNull(response.LocationCode);
@@ -92,9 +93,9 @@ namespace WaTaxRateLookup_Test
         [Test]
         public void No_Address_Bad_ZipCode_Test() {
             var address = new Address(null, null, "9111118501");
-            var client = new Client();
-            var response = client.Get(address);
+            var response = _Client.Get(address);
             Assert.AreEqual(4, response.ResultCode);
+            Assert.AreEqual("Invalid arguements.", response.ResultCodeDefinition);
             Assert.NotNull(response.ResultCodeDefinition);
             Assert.IsNull(response.LocalRate);
             Assert.IsNull(response.LocationCode);
