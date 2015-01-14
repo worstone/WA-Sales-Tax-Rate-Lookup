@@ -25,7 +25,7 @@ namespace WaTaxRateLookup_Test
 
         [Test]
         public void Good_Address_Test() {
-            var address = new Address("6500 Linderson way", "", "98501");
+            var address = new Address("6500 Linderson way", "Olympia", "98501");
             var client = new Client();
             var response = client.Get(address);
             Assert.AreEqual(0, response.ResultCode);

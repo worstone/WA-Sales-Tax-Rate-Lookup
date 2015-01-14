@@ -29,7 +29,7 @@ Basic Usage
 -------------
 
 ```csharp
-var address = new Address("6500 Linderson way", "", "98501");
+var address = new Address("6500 Linderson way", "Olympia", "98501");
             var client = new Client();
             var response = client.Get(address);
 ```
